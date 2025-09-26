@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnoTech - Homepage</title>
+  
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video"
+    style="position: fixed; top: 0; left: 0; min-width: 100vw; min-height: 100vh; width: auto; height: auto; object-fit: cover; z-index: -1;">
+    <source src="images/Video Background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Header / Navigation -->
+  <header class="bg-light shadow-sm py-3">
+    <nav class="container d-flex justify-content-center gap-4">
+      <a href="#hero" class="nav-link fw-semibold text-dark">Home</a>
+      <a href="#services" class="nav-link fw-semibold text-dark">Services</a>
+      <a href="#portfolio" class="nav-link fw-semibold text-dark">Portfolio</a>
+      <a href="#contact" class="nav-link fw-semibold text-dark">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero text-center py-5 bg-primary text-white">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to InnoTech</h1>
+      <p class="lead">Innovative IT Solutions for Your Business</p>
+      <button 
+        class="btn btn-light mt-3" 
+        onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })"
+      >
+        Get Started
+      </button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container py-5">
+    <h2 class="text-center mb-5 fw-bold">Our Services</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0 h-100 p-4">
+          <i class="bi bi-gear-fill fs-1 text-primary mb-3"></i>
+          <h5 class="fw-semibold">Managed IT Services</h5>
+          <p class="text-muted">Reliable and proactive IT support tailored to your organization’s needs.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0 h-100 p-4">
+          <i class="bi bi-people-fill fs-1 text-primary mb-3"></i>
+          <h5 class="fw-semibold">IT Consulting</h5>
+          <p class="text-muted">Professional guidance to help you make informed technology decisions.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0 h-100 p-4">
+          <i class="bi bi-cloud-fill fs-1 text-primary mb-3"></i>
+          <h5 class="fw-semibold">Cloud Computing</h5>
+          <p class="text-muted">Scalable cloud solutions to optimize efficiency and collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section with Carousel -->
+  <section id="portfolio" class="container py-5">
+    <h2 class="text-center mb-5 fw-bold">Our Portfolio</h2>
+
+    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 mb-4"> <!-- ✅ wider card -->
+              <div class="card shadow-sm border-0 h-100">
+                <img src="images/project1.jpg" class="card-img-top" alt="Project 1 Sample" />
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold">Solution and Design</h5>
+                  <p class="card-text text-muted">A modern IT solution designed to streamline business processes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 mb-4">
+              <div class="card shadow-sm border-0 h-100">
+                <img src="images/project2.jpg" class="card-img-top" alt="Project 2 Sample" />
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold">Teamwork</h5>
+                  <p class="card-text text-muted">A collaborative platform enhancing team productivity.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 mb-4">
+              <div class="card shadow-sm border-0 h-100">
+                <img src="images/project3.jpg" class="card-img-top" alt="Project 3 Sample" />
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold">Service Management</h5>
+                  <p class="card-text text-muted">An event management system integrating smart solutions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5">
+    <h2 class="text-center mb-5 fw-bold">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Your Name" required />
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Your Email" required />
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary px-4">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1">&copy; 2025 InnoTech. All Rights Reserved.</p>
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=61555054532302" target="_blank" class="text-white me-3">
+        <i class="bi bi-facebook fs-4"></i>
+      </a>
+      <a href="https://www.instagram.com/innotech.pt/" target="_blank" class="text-white">
+        <i class="bi bi-instagram fs-4"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

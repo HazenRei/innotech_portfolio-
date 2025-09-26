@@ -1,0 +1,245 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #000;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background-color: #fff; /* changed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  background: transparent !important;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 12px;
+  color: #000; /* black text for white header */
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+/* Hero Section */
+.hero {
+  background: transparent !important;
+  color: #000; /* ensure default text is visible */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: transparent; /* light overlay for contrast */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero,
+header {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff; /* black text for visibility */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #ffffff; /* dark gray */
+}
+
+.hero button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  background-color: #fff; /* button visible */
+  color: #000; /* black text */
+  border: 2px solid #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  background-color: #f2f2f2;
+}
+
+/* Remove section border-radius and box-shadow for hero if needed */
+.hero section {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Section Styling */
+section {
+  padding: 4rem 2rem;
+  background-color: translucent;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+/* Services & Portfolio Cards */
+.card {
+  background: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.2);
+}
+
+.card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Portfolio Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-size: 50% 50%;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  color: #000;
+}
+
+#contact form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.75rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto 1rem auto;
+  background: #fff;
+  color: #000;
+}
+
+/* Submit Button */
+#contact button[type="submit"] {
+  padding: 0.75rem 2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+  background: #333;
+}
+
+/* Universal Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  opacity: 1;
+}
+
+/* Responsive placeholder font size */
+@media (max-width: 991.98px) {
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer */
+footer {
+  background: #fff; /* changed */
+  color: #000; /* black text */
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  color: #000; /* black links */
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #555;
+}
